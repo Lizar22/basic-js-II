@@ -60,11 +60,13 @@ switch(pet) {
 
 //Ejercicio 6: Usando un operador ternario, escribe un programa que lea la constante weather e imprima en consola si es soleado "Me vestiré con un vestido" y si no es así que imprima "Me vestiré con pantalón"
 
-const weather = "soleado"
+const weather = "frío"
 
-//const result = //Escribe tu código aquí;
+const result = (weather == "soleado")
+? "Me vestiré con un vestido"
+: "Me vestiré con pantalón";
 
-//console.log(result)
+console.log(result)
 
 //Ejercicio 7: cambia el valor de weather a "frío" y mira el resultado en consola para comprobar que tu código funciona bien.
 
@@ -90,6 +92,10 @@ switch(value) {
 //Ejercicio 9: Imprime en consola una lista del 0 al 10 con el bucle for
 
 //Escribe tu código aquí
+
+for (let i = 0; i < 11; i++) {
+    console.log(i)
+};
 
 
 //Ejercicio 10: Con un bucle for in imprime en pantalla todos los nombres, apellidos y su aporte a la sociedad de las programadoras de la historia contenidas en el array llamado 'programmers', Deberás imprimir el índice y la información de cada una de ellas de la siguiente manera: '0: Ada Lovelace, su aporte fue la máquina analítica'. 
@@ -119,6 +125,13 @@ const programmers = [
 
 //Escribe tu código aquí
 
+//let txt1 = ":"
+//let txt2 = ", su aporte fue "
+
+for (let x in programmers) {
+    console.log(programmers[x])
+};
+
 
 //Ejercicio 11: Con un bucle for of imprime en consola "Hola, mi nombre es ... " y reemplaza los tres puntos con cada nombre del array dado.
 
@@ -126,15 +139,29 @@ const names = ['Carla', 'Alex', 'Judith', 'Maria', 'Noelia']
 
 //Escribe tu código aquí
 
+for (let i of names){
+    console.log("Hola, mi nombre es " + i)
+};
 
 //Ejercicio 12: Con un bucle while imprime en consola una lista del 1 al 5.
 
 //Escribe tu código aquí
 
+let i = 1;
+while (i < 6) {
+    console.log(i);
+    i++;
+};
 
 //Ejercicio 13: Realiza el mismo ejercicio anterior pero con un bucle do while.
 
 //Escribe tu código aquí
+
+do {
+    console.log(i);
+    i++;
+} 
+while (i <= 5);
 
 
 //Ejercicio 14: Saludo Personalizado
@@ -142,9 +169,24 @@ const names = ['Carla', 'Alex', 'Judith', 'Maria', 'Noelia']
 
 //Escribe tu código aquí
 
+function saludar(nombre)
+{
+    console.log( "Holiii " + nombre);
+} 
+saludar("Lara");
+saludar("Leo");
+saludar("Nina");
+
 
 //Ejercicio 15: Calcular el Área de un Rectángulo
 //Crea una función llamada calcularAreaRectangulo que tome dos parámetros (ancho y alto) y devuelva el área del rectángulo. Luego, llama a la función con diferentes valores de ancho y alto y muestra el resultado en la consola.
 
 //Escribe tu código aquí
 
+function calcularAreaRectangulo(ancho, alto)
+{
+    console.log(ancho * alto)
+}
+calcularAreaRectangulo("2", "4")
+calcularAreaRectangulo("3", "6")
+calcularAreaRectangulo("16", "9")
