@@ -125,11 +125,10 @@ const programmers = [
 
 //Escribe tu código aquí
 
-//let txt1 = ":"
-//let txt2 = ", su aporte fue "
-
-for (let x in programmers) {
-    console.log(programmers[x])
+for (let i in programmers) {
+    let singleprgr = programmers[i];
+    let result = i + ": " + singleprgr.name + " " + singleprgr.lastname + ", " + "su aporte fue " + singleprgr.knowledge;
+    console.log(result)
 };
 
 
@@ -157,12 +156,11 @@ while (i < 6) {
 
 //Escribe tu código aquí
 
+let x = 1
 do {
-    console.log(i);
-    i++;
-} 
-while (i <= 5);
-
+    console.log(x);
+    x++;
+} while (x < 6);
 
 //Ejercicio 14: Saludo Personalizado
 //Crea una función llamada saludar que tome un parámetro llamado nombre y devuelva un saludo personalizado. Luego, llama a la función con diferentes nombres y muestra el resultado en la consola.
